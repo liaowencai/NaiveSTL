@@ -1,0 +1,4 @@
+#ifndef NAIVE_STL_CONSTRUCT_H
+#define NAIVE_STL_CONSTRUCT_H
+
+#endif
