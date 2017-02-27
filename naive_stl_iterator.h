@@ -69,6 +69,7 @@ iterator_category(const Iterator&)
 }
 
 // function to determine distance type of iterators
+template <class Iterator>
 inline typename iterator_traits<Iterator>::difference_type*
 distance_type(const Iterator&)
 {
@@ -77,6 +78,7 @@ distance_type(const Iterator&)
 }
 
 // function to determine value type of iterators
+template <class Iterator>
 inline typename iterator_traits<Iterator>::value_type*
 value_type(const Iterator&)
 {
