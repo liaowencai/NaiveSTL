@@ -5,6 +5,9 @@
 #ifndef NAIVE_TYPE_TRAITS_H
 #define NAIVE_TYPE_TRAITS_H
 
+struct __true_type {};
+struct __false_type {};
+
 template <class type>
 struct __type_traits 
 {
