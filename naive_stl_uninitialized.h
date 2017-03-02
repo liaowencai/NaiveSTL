@@ -7,6 +7,7 @@
 
 #include <cstring>
 #include "naive_stl_construct.h"
+#include "naive_algorithm.h"
 
 //-----------------------------------------------------------------
 // uninitialized_fill_n
