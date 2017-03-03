@@ -66,7 +66,7 @@ void * __malloc_alloc_template<inst>::oom_malloc(size_t n)
 	void(*my_alloc_handler)();
 	void result;
 
-	for (;;)
+	for ( ; ; )
 	{
 		my_malloc_handler = __malloc_alloc_oom_handler;
 		if (my_alloc_handler == nullptr)
