@@ -5,6 +5,7 @@
 #ifndef NAIVE_STACK_H
 #define NAIVE_STACK_H
 
+#include "naive_deque.h"
 template <class T, class Sequence = deque<T>>
 class stack
 {
