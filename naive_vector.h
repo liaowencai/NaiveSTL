@@ -14,6 +14,7 @@ public:
 	typedef T			value_type;
 	typedef value_type* pointer;
 	typedef value_type* iterator;
+	typedef reverse_iterator<iterator> reverse_iterator;
 	typedef value_type& reference;
 	typedef const value_type& const_reference;
 	typedef size_t		size_type;
@@ -53,6 +54,8 @@ protected:
 public:
 	iterator begin() { return start; }
 	iterator end() { return finish; }
+	reverse_iterator rbegin() { return reverse_iterator(end()); }
+	reverse_iterator rend() { return reverse_iterator(begin()); }
 	size_type size() const { return static_cast<size_type>(end() - begin()); }
 	size_type capacity() const
 	{

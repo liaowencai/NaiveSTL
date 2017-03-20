@@ -100,6 +100,7 @@ public:
 	typedef size_t size_type;
 	typedef ptrdiff_t difference_type;
 	typedef __list_iterator<T, T&, T*> iterator;
+	typedef reverse_iterator<iterator> reverse_iterator;
 
 protected:
 	link_type node;
@@ -153,6 +154,8 @@ public:
 
 	iterator begin() { return static_cast<link_type>((*node).next); }
 	iterator end() { return node; }
+	reverse_iterator rbegin() { return reverse_iterator(end()); }
+	reverse_iterator rend() { return reverse_iterator(begin()); }
 	bool empty() const { return node->next == node; }
 	size_type size() const
 	{

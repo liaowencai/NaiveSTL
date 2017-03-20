@@ -160,6 +160,7 @@ public:
 	typedef ptrdiff_t							difference_type;
 	typedef	size_t								size_type;
 	typedef __deque_iterator<T, T&, T*, BufSiz> iterator;
+	typedef reverse_iterator<iterator>			reverse_iterator;
 
 protected:
 	// pointer of pointer of T
@@ -388,6 +389,8 @@ public:
 
 	iterator begin() { return start; }
 	iterator end() { return finish; }
+	reverse_iterator rbegin() { return reverse_iterator(end()); }
+	reverse_iterator rend() { return reverse_iterator(begin()); }
 
 	reference operator[](size_type n)
 	{
@@ -581,10 +584,6 @@ public:
 			return insert_aux(position, x);
 		}
 	}
-	
-
 };
 
-
 #endif // !NAIVE_DEQUE_H
-
